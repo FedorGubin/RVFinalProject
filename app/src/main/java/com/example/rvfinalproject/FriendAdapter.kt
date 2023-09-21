@@ -1,5 +1,6 @@
 package com.example.rvfinalproject
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,5 +37,12 @@ class FriendAdapter : RecyclerView.Adapter<FriendAdapter.MyHolder>() {
     fun addCard(friends: Friends) {
         friendList.add(friends)
         notifyItemInserted(friendList.size - 1)
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun setFriends(friends: List<Friends>) {
+        friendList.clear()
+        friendList.addAll(friends)
+        notifyDataSetChanged()
     }
 }

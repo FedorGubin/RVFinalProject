@@ -8,11 +8,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.rvfinalproject.databinding.CardsBinding
 
 class FriendAdapter : RecyclerView.Adapter<FriendAdapter.MyHolder>() {
-   private val friendList = ArrayList<Friends>()
+   private val friendList = ArrayList<Friend>()
 
     class MyHolder(item: View) : RecyclerView.ViewHolder(item) {
-        val binding = CardsBinding.bind(item)
-        fun bind(friends: Friends) {
+        private val binding = CardsBinding.bind(item)
+        fun bind(friends: Friend) {
             binding.apply {
                 photo.setImageResource(friends.img)
                 name.text = friends.name
@@ -34,13 +34,8 @@ class FriendAdapter : RecyclerView.Adapter<FriendAdapter.MyHolder>() {
         return friendList.size
     }
 
-    fun addCard(friends: Friends) {
-        friendList.add(friends)
-        notifyItemInserted(friendList.size - 1)
-    }
-
     @SuppressLint("NotifyDataSetChanged")
-    fun setFriends(friends: List<Friends>) {
+    fun setFriends(friends: List<Friend>) {
         friendList.clear()
         friendList.addAll(friends)
         notifyDataSetChanged()

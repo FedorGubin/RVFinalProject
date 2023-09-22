@@ -1,5 +1,5 @@
 package com.example.rvfinalproject
 
 interface MyDataSource {
-    fun getData(): List<>
+    fun getData(): List<MessageCard>
 }

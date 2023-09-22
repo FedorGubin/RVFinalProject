@@ -11,9 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        tools:itemCount="4" />
+        tools:itemCount="4"
+        tools:listitem="@layout/massage_card"/>
 
     <Button
+        android:id="@+id/chenge"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

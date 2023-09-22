@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.rvfinalproject.databinding.ActivityMainBinding
 
-
+// TODO(Разобраться как создаётся ViewModel. Почему она не теряет значения переменных и может
+//  переживать )
+// TODO(Ну и вообще посмотреть про observe, liveData + layoutManager)
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val adapter = DataAdapter()

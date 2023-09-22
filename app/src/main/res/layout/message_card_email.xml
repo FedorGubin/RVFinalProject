@@ -38,20 +38,34 @@
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:lines="1"
+        android:textStyle="bold"
+        android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/time"
         app:layout_constraintStart_toEndOf="@+id/andrey"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Tinkoff" />
 
     <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/andrey"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:textStyle="bold"
+        tools:text="Напиши, или позвони, если будут вопросы какие или если сделаешь всё" />
+
+    <TextView
         android:id="@+id/text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ellipsize="end"
-        android:lines="2"
+        android:lines="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/andrey"
-        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle"
         tools:text="В ConstraintLayout есть параметр layout_constraintDimensionRatio , через который можно указать соотношение сторон виджета, в том числе и квадрат. Или писать свой класс-наследник от" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

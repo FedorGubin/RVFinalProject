@@ -12,7 +12,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         tools:itemCount="4"
-        tools:listitem="@layout/massage_card"/>
+        tools:listitem="@layout/massage_card_sms"/>
 
     <Button
         android:id="@+id/chenge"
